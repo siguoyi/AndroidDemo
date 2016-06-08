@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidDemo</string>
+    <string name="mytextview">MyTextView</string>
+    <string name="button_run_scheduler">Run Schedulers Example</string>
+    <string name="ontouch_demo">onTouch Demo</string>
+    <string name="rxjava_demo">RxJava Demo</string>
+</resources>

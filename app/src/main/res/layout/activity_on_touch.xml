@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.chenlei1_iri.androiddemo.MyLinearLayout1
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.chenlei1_iri.androiddemo.MyLinearLayout2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.example.chenlei1_iri.androiddemo.MyTextView
+            android:id="@+id/mytextview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/mytextview"
+            android:textSize="30sp"
+            android:textColor="#7921e6"
+            android:textStyle="bold|italic"/>
+    </com.example.chenlei1_iri.androiddemo.MyLinearLayout2>
+</com.example.chenlei1_iri.androiddemo.MyLinearLayout1>
