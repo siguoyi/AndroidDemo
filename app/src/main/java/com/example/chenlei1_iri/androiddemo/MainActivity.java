@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_onTouch;
     private Button btn_rxJava;
+    private Button btn_rxImageload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn_onTouch = (Button) findViewById(R.id.onTouchDemo);
         btn_rxJava = (Button) findViewById(R.id.rxJavaDemo);
+        btn_rxImageload = (Button) findViewById(R.id.rxImageLoadDemo);
 
         btn_onTouch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent rxJavaIntent = new Intent(MainActivity.this, RxJavaActivity.class);
                 startActivity(rxJavaIntent);
+            }
+        });
+
+        btn_rxImageload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent rxImageLoadIntent = new Intent(MainActivity.this, RxImageLoadActivity.class);
+                startActivity(rxImageLoadIntent);
             }
         });
     }

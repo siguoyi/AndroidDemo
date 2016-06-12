@@ -1,11 +1,14 @@
 package com.example.chenlei1_iri.androiddemo;
 
+import android.content.pm.ActivityInfo;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +16,7 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.exceptions.OnErrorThrowable;
+import rx.functions.Action1;
 import rx.functions.Func0;
 
 import static android.os.Process.THREAD_PRIORITY_BACKGROUND;
@@ -27,20 +31,47 @@ public class RxJavaActivity extends AppCompatActivity {
     private Looper backgroundLooper;
     private MySubscriber<String> subscriber;
 
+    private Button btn_rx;
+    private TextView tv_rx;
+
     private static String[] words = {"from 1", "from 2", "from 3", "from 4", "from 5"};
     private int count = 0;
-    int type;
+    private int type;
+    private StringBuilder sb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_java);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        btn_rx = (Button) findViewById(R.id.button_run_scheduler);
+        tv_rx = (TextView) findViewById(R.id.tv_rx_text);
+
+        sb = new StringBuilder();
 
         BackgroundThread backgroundThread = new BackgroundThread();
         backgroundThread.start();
         backgroundLooper = backgroundThread.getLooper();
 
-        findViewById(R.id.button_run_scheduler).setOnClickListener(new View.OnClickListener() {
+        Action1<String> onNextAction = new Action1<String>() {
+            @Override
+            public void call(String s) {
+                sb.append("onNextAction " + s + "\n");
+                tv_rx.setText(sb.toString());
+                Log.d(TAG, "onNextAction " + s + "\n");
+            }
+        };
+
+        Action1 onComplete = new Action1() {
+            @Override
+            public void call(Object o) {
+                Log.d(TAG, "complete");
+            }
+        };
+
+        Observable.from(words).subscribe(onNextAction, onComplete);
+
+        btn_rx.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 if(count % 3 == 0){
                     type = TYPE_CREATE;
@@ -112,7 +143,9 @@ public class RxJavaActivity extends AppCompatActivity {
 
         @Override
         public void onCompleted() {
-            Log.d(TAG, "onCompleted()");
+            sb.append("onCompleted()" + "\n");
+            tv_rx.setText(sb.toString());
+            Log.d(TAG, "onCompleted()" + "\n");
         }
 
         @Override
@@ -122,7 +155,9 @@ public class RxJavaActivity extends AppCompatActivity {
 
         @Override
         public void onNext(String s) {
-            Log.d(TAG, "onNext(" + s + ")");
+            sb.append("onNext(" + s + ")" + "\n");
+            tv_rx.setText(sb.toString());
+            Log.d(TAG, "onNext(" + s + ")" + "\n");
         }
     }
 }

@@ -4,4 +4,6 @@
     <string name="button_run_scheduler">Run Schedulers Example</string>
     <string name="ontouch_demo">onTouch Demo</string>
     <string name="rxjava_demo">RxJava Demo</string>
+    <string name="rximageload_demo">RxImageLoad Demo</string>
+    <string name="load_image">Load Image</string>
 </resources>

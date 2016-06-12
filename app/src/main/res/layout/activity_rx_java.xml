@@ -15,4 +15,15 @@
         android:layout_height="wrap_content"
         android:text="@string/button_run_scheduler"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_run_scheduler"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_rx_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
 </RelativeLayout>
