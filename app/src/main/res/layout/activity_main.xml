@@ -30,4 +30,20 @@
         android:textAllCaps="false"
         android:text="@string/rximageload_demo"/>
 
+    <Button
+        android:id="@+id/rxTransformDemo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/rxjavatransform_demo"/>
+
+    <Button
+        android:id="@+id/btn_butterknife"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/butter_knife"/>
+
 </LinearLayout>

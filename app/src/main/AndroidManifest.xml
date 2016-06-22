@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chenlei1_iri.androiddemo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,9 @@
         </activity>
         <activity android:name=".RxJavaActivity" />
         <activity android:name=".OnTouchActivity" />
-        <activity android:name=".RxImageLoadActivity"></activity>
+        <activity android:name=".RxImageLoadActivity" />
+        <activity android:name=".RxJavaTransformActivity" />
+        <activity android:name=".ButterKnifeActivity"></activity>
     </application>
 
 </manifest>

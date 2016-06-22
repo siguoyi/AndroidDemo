@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_onTouch;
     private Button btn_rxJava;
     private Button btn_rxImageload;
+    private Button btn_rxJavaTransform;
+    private Button btn_butterknife;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         btn_onTouch = (Button) findViewById(R.id.onTouchDemo);
         btn_rxJava = (Button) findViewById(R.id.rxJavaDemo);
         btn_rxImageload = (Button) findViewById(R.id.rxImageLoadDemo);
+        btn_rxJavaTransform = (Button) findViewById(R.id.rxTransformDemo);
+        btn_butterknife = (Button) findViewById(R.id.btn_butterknife);
 
         btn_onTouch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +47,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent rxImageLoadIntent = new Intent(MainActivity.this, RxImageLoadActivity.class);
                 startActivity(rxImageLoadIntent);
+            }
+        });
+
+        btn_rxJavaTransform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent rxJavaTransformIntent = new Intent(MainActivity.this, RxJavaTransformActivity.class);
+                startActivity(rxJavaTransformIntent);
+            }
+        });
+
+        btn_butterknife.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent butterKnifeIntent = new Intent(MainActivity.this, ButterKnifeActivity.class);
+                startActivity(butterKnifeIntent);
             }
         });
     }
