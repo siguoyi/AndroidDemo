@@ -15,4 +15,6 @@
     <string name="click">Click</string>
     <string name="butter_knife">Butter Knife</string>
     <string name="reset">Reset</string>
+    <string name="test_flatmap1">Test flatMap1</string>
+    <string name="rxjavaretrofi_demo">RxJavaRetrofi Demo</string>
 </resources>

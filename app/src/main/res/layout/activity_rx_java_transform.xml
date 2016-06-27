@@ -26,18 +26,18 @@
         android:text="@string/test_flatmap"/>
 
     <Button
-        android:id="@+id/btn_lift"
+        android:id="@+id/btn_flatmap1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_flatmap"
         android:textAllCaps="false"
         android:layout_marginTop="5dp"
-        android:text="@string/test_lift"/>
+        android:text="@string/test_flatmap1"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btn_lift"
+        android:layout_below="@+id/btn_flatmap1"
         android:layout_marginTop="5dp">
         <TextView
             android:id="@+id/tv_rx_text"

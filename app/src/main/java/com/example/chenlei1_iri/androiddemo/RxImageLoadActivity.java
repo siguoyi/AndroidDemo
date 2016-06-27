@@ -59,7 +59,10 @@ public class RxImageLoadActivity extends AppCompatActivity implements View.OnCli
                         subscriber.onNext(loadImage());
                         subscriber.onCompleted();
                     }
-                }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(mySubscriber);
+                })
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(mySubscriber);
                 break;
         }
     }

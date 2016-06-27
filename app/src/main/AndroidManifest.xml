@@ -21,7 +21,8 @@
         <activity android:name=".OnTouchActivity" />
         <activity android:name=".RxImageLoadActivity" />
         <activity android:name=".RxJavaTransformActivity" />
-        <activity android:name=".ButterKnifeActivity"></activity>
+        <activity android:name=".ButterKnifeActivity" />
+        <activity android:name=".retrofit.RxJavaRetrofitActivity"></activity>
     </application>
 
 </manifest>
