@@ -11,14 +11,18 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import rx.Observable;
 import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 
 public class RxJavaTransformActivity extends AppCompatActivity {
     private static final String TAG = RxJavaTransformActivity.class.getSimpleName();
@@ -34,6 +38,8 @@ public class RxJavaTransformActivity extends AppCompatActivity {
     Button btnTake;
     @BindView(R.id.tv_rx_text)
     TextView tvRxText;
+    @BindView(R.id.btn_interval)
+    Button btnInterval;
 
     private StringBuilder sb;
     private Student[] student = new Student[3];
@@ -58,6 +64,34 @@ public class RxJavaTransformActivity extends AppCompatActivity {
         student[0] = new Student(1, 23, "curry", "male", course1);
         student[1] = new Student(2, 25, "kobe", "male", course2);
         student[2] = new Student(3, 21, "taylor", "female", course3);
+    }
+
+    @OnClick({R.id.btn_map, R.id.btn_flatmap, R.id.btn_flatmap1, R.id.btn_filter, R.id.btn_take, R.id.btn_interval})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_map:
+                testMap();
+                break;
+            case R.id.btn_flatmap:
+                testFlatMap((i++) % 3);
+                break;
+            case R.id.btn_flatmap1:
+                testFlatMap(j % 3);
+                testFlatMap1(j % 3);
+                j++;
+                break;
+            case R.id.btn_filter:
+                int num = (int) (Math.random() * 100);
+                Log.d(TAG, "num: " + num);
+                testFilter(num);
+                break;
+            case R.id.btn_take:
+                testTake();
+                break;
+            case R.id.btn_interval:
+                testInterval();
+                break;
+        }
     }
 
     private void testMap() {
@@ -146,27 +180,57 @@ public class RxJavaTransformActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.btn_map, R.id.btn_flatmap, R.id.btn_flatmap1, R.id.btn_filter, R.id.btn_take})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_map:
-                testMap();
-                break;
-            case R.id.btn_flatmap:
-                testFlatMap((i++) % 3);
-                break;
-            case R.id.btn_flatmap1:
-                testFlatMap(j % 3);
-                testFlatMap1(j % 3);
-                j++;
-                break;
-            case R.id.btn_filter:
-                int num = (int) (Math.random() * 100);
-                Log.d(TAG, "num: " + num);
-                testFilter(num);
-                break;
-            case R.id.btn_take:
-                break;
-        }
+    private void testInterval(){
+        Observable.interval(1, TimeUnit.SECONDS)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Long>() {
+                    @Override
+                    public void onCompleted() {
+                        sb.append("Complete ! \n");
+                        tvRxText.setText(sb.toString());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(Long aLong) {
+                        if(aLong < 10){
+                            sb.append(aLong + 1 + " s" + "\n");
+                            tvRxText.setText(sb.toString());
+                        }else {
+                            onCompleted();
+                        }
+                    }
+                });
     }
+
+    private void testTake() {
+        Observable.interval(1, TimeUnit.SECONDS)
+                .take(10)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Long>() {
+                    @Override
+                    public void onCompleted() {
+                        sb.append("Complete ! \n");
+                        tvRxText.setText(sb.toString());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(Long aLong) {
+                        sb.append(aLong + 1 + " s" + "\n");
+                        tvRxText.setText(sb.toString());
+                    }
+                });
+    }
+
 }
