@@ -22,7 +22,6 @@
         <activity android:name=".RxImageLoadActivity" />
         <activity android:name=".RxJavaTransformActivity" />
         <activity android:name=".ButterKnifeActivity" />
-        <activity android:name=".retrofit.RxJavaRetrofitActivity"></activity>
     </application>
 
 </manifest>

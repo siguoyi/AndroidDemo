@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import rx.Observable;
 import rx.Subscriber;
@@ -21,6 +23,7 @@ public class RxJavaTransformActivity extends AppCompatActivity implements View.O
     private Button btn_map;
     private Button btn_flatMap;
     private Button btn_flatMap1;
+    private Button btn_filter;
     private TextView tv_rx_text;
 
     private StringBuilder sb;
@@ -41,11 +44,13 @@ public class RxJavaTransformActivity extends AppCompatActivity implements View.O
         btn_map = (Button) findViewById(R.id.btn_map);
         btn_flatMap = (Button) findViewById(R.id.btn_flatmap);
         btn_flatMap1 = (Button) findViewById(R.id.btn_flatmap1);
+        btn_filter = (Button) findViewById(R.id.btn_filter);
         tv_rx_text = (TextView) findViewById(R.id.tv_rx_text);
 
         btn_map.setOnClickListener(this);
         btn_flatMap.setOnClickListener(this);
         btn_flatMap1.setOnClickListener(this);
+        btn_filter.setOnClickListener(this);
 
         sb = new StringBuilder();
 
@@ -71,14 +76,20 @@ public class RxJavaTransformActivity extends AppCompatActivity implements View.O
                 testFlatMap1(j%3);
                 j++;
                 break;
+            case R.id.btn_filter:
+                int num = (int)(Math.random()*100);
+                Log.d(TAG, "num: " + num);
+                testFilter(num);
+                break;
         }
     }
 
     private void testMap(){
-        Observable.just("test map").map(new Func1<String, String>() {
+        Observable.just(new Date()).map(new Func1<Date, String>() {
             @Override
-            public String call(String s) {
-                return s + " test";
+            public String call(Date date) {
+                String s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+                return "Current time: " + s;
             }
         }).subscribe(new Action1<String>() {
             @Override
@@ -141,5 +152,21 @@ public class RxJavaTransformActivity extends AppCompatActivity implements View.O
                 return Observable.from(student.getCourseList());
             }
         }).subscribe(subscriber);
+    }
+
+    private void testFilter(int i){
+        Observable.just(i).filter(new Func1<Integer, Boolean>() {
+            @Override
+            public Boolean call(Integer integer) {
+                boolean isEvenNumber = integer % 2 == 0;
+                return isEvenNumber;
+            }
+        }).subscribe(new Action1<Integer>() {
+            @Override
+            public void call(Integer integer) {
+                sb.append("Current number: " + integer + "\n");
+                tv_rx_text.setText(sb.toString());
+            }
+        });
     }
 }

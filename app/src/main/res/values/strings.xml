@@ -17,4 +17,5 @@
     <string name="reset">Reset</string>
     <string name="test_flatmap1">Test flatMap1</string>
     <string name="rxjavaretrofi_demo">RxJavaRetrofi Demo</string>
+    <string name="test_filter">Test filter</string>
 </resources>
