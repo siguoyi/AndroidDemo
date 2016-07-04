@@ -49,6 +49,14 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/test_filter"/>
 
+            <Button
+                android:id="@+id/btn_take"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:text="@string/test_take"/>
+
             <TextView
                 android:id="@+id/tv_rx_text"
                 android:layout_width="match_parent"
