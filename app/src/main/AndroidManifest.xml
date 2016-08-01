@@ -10,18 +10,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RxJavaActivity" />
-        <activity android:name=".OnTouchActivity" />
-        <activity android:name=".RxImageLoadActivity" />
-        <activity android:name=".RxJavaTransformActivity" />
-        <activity android:name=".ButterKnifeActivity" />
+        <activity android:name=".activity.RxJavaActivity" />
+        <activity android:name=".activity.OnTouchActivity" />
+        <activity android:name=".activity.RxImageLoadActivity" />
+        <activity android:name=".activity.RxJavaTransformActivity" />
+        <activity android:name=".activity.ButterKnifeActivity" />
+        <activity android:name=".activity.SVGActivity" />
+        <activity android:name=".activity.NumberPickerActivity"/>
+        <activity android:name=".activity.LocalServiceTestActivity"/>
+        <activity android:name=".activity.RemoteServiceTestActivity"/>
+
+        <service android:name=".binder.LocalService"/>
+        <service android:name=".binder.RemoteService" android:process=":remote"/>
     </application>
 
 </manifest>

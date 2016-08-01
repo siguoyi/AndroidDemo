@@ -46,4 +46,28 @@
         android:textAllCaps="false"
         android:text="@string/butter_knife"/>
 
+    <Button
+        android:id="@+id/btn_svg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/svg_demo"/>
+
+    <Button
+        android:id="@+id/btn_number_picker"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/number_picker_demo"/>
+
+    <Button
+        android:id="@+id/btn_binder"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/binder_demo"/>
+
 </LinearLayout>

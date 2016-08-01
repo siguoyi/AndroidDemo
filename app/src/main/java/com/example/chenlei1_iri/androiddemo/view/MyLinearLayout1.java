@@ -1,4 +1,4 @@
-package com.example.chenlei1_iri.androiddemo;
+package com.example.chenlei1_iri.androiddemo.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,4 +1,4 @@
-package com.example.chenlei1_iri.androiddemo;
+package com.example.chenlei1_iri.androiddemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.chenlei1_iri.androiddemo.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
+    @BindView(R.id.btn_svg)
+    Button btnSvg;
+    @BindView(R.id.btn_number_picker)
+    Button btnNumberPicker;
+    @BindView(R.id.btn_binder)
+    Button btnBinder;
 
     private Button btn_onTouch;
     private Button btn_rxJava;
@@ -19,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         btn_onTouch = (Button) findViewById(R.id.onTouchDemo);
         btn_rxJava = (Button) findViewById(R.id.rxJavaDemo);
@@ -67,4 +80,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @OnClick({R.id.btn_svg, R.id.btn_number_picker, R.id.btn_binder})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_svg:
+                Intent svgIntent = new Intent(MainActivity.this, SVGActivity.class);
+                startActivity(svgIntent);
+                break;
+            case R.id.btn_number_picker:
+                Intent numberPickerIntent = new Intent(MainActivity.this, NumberPickerActivity.class);
+                startActivity(numberPickerIntent);
+                break;
+            case R.id.btn_binder:
+                Intent binderIntent = new Intent(MainActivity.this, RemoteServiceTestActivity.class);
+                startActivity(binderIntent);
+                break;
+        }
+    }
 }

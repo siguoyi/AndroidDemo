@@ -1,12 +1,10 @@
-package com.example.chenlei1_iri.androiddemo;
+package com.example.chenlei1_iri.androiddemo.view;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by chenlei1-iri on 2016/6/6.

@@ -1,4 +1,4 @@
-package com.example.chenlei1_iri.androiddemo;
+package com.example.chenlei1_iri.androiddemo.activity;
 
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.chenlei1_iri.androiddemo.R;
 
 import rx.Observable;
 import rx.Subscriber;

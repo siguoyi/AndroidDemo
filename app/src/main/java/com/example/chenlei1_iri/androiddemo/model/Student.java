@@ -1,4 +1,4 @@
-package com.example.chenlei1_iri.androiddemo;
+package com.example.chenlei1_iri.androiddemo.model;
 
 import java.util.ArrayList;
 
@@ -64,7 +64,7 @@ public class Student {
         this.courseList = courseList;
     }
 
-    class Course {
+    public class Course {
         private String chinese_laguage = "语文";
         private String math ="数学";
         private String english = "英语";

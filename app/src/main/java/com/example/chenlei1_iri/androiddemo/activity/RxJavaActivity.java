@@ -1,4 +1,4 @@
-package com.example.chenlei1_iri.androiddemo;
+package com.example.chenlei1_iri.androiddemo.activity;
 
 import android.content.pm.ActivityInfo;
 import android.os.HandlerThread;
@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.chenlei1_iri.androiddemo.R;
 
 import java.util.concurrent.TimeUnit;
 

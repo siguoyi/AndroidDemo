@@ -1,4 +1,4 @@
-package com.example.chenlei1_iri.androiddemo;
+package com.example.chenlei1_iri.androiddemo.activity;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.chenlei1_iri.androiddemo.R;
+import com.example.chenlei1_iri.androiddemo.model.Student;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
