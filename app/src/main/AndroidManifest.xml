@@ -23,12 +23,16 @@
         <activity android:name=".activity.RxJavaTransformActivity" />
         <activity android:name=".activity.ButterKnifeActivity" />
         <activity android:name=".activity.SVGActivity" />
-        <activity android:name=".activity.NumberPickerActivity"/>
-        <activity android:name=".activity.LocalServiceTestActivity"/>
-        <activity android:name=".activity.RemoteServiceTestActivity"/>
+        <activity android:name=".activity.NumberPickerActivity" />
+        <activity android:name=".activity.LocalServiceTestActivity" />
+        <activity android:name=".activity.RemoteServiceTestActivity" />
 
-        <service android:name=".binder.LocalService"/>
-        <service android:name=".binder.RemoteService" android:process=":remote"/>
+        <service android:name=".binder.LocalService" />
+        <service
+            android:name=".binder.RemoteService"
+            android:process=":remote" />
+
+        <activity android:name=".activity.MVPActivity"></activity>
     </application>
 
 </manifest>

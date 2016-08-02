@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnNumberPicker;
     @BindView(R.id.btn_binder)
     Button btnBinder;
+    @BindView(R.id.btn_mvp)
+    Button btnMvp;
 
     private Button btn_onTouch;
     private Button btn_rxJava;
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.btn_svg, R.id.btn_number_picker, R.id.btn_binder})
+    @OnClick({R.id.btn_svg, R.id.btn_number_picker, R.id.btn_binder, R.id.btn_mvp})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_svg:
@@ -94,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_binder:
                 Intent binderIntent = new Intent(MainActivity.this, RemoteServiceTestActivity.class);
                 startActivity(binderIntent);
+                break;
+            case R.id.btn_mvp:
+                Intent mvpIntent = new Intent(MainActivity.this, MVPActivity.class);
+                startActivity(mvpIntent);
                 break;
         }
     }

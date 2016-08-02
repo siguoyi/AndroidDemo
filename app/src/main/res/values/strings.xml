@@ -26,4 +26,6 @@
     <string name="binder_demo">Binder Demo</string>
     <string name="binder_test">Binder Test</string>
     <string name="bind">Bind</string>
+    <string name="mvp_demo">MVP Demo</string>
+    <string name="mvp">MVP</string>
 </resources>
