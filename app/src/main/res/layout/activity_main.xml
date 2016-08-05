@@ -23,6 +23,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/ontouch_demo"/>
 
             <Button
@@ -33,6 +34,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/rxjava_demo"/>
 
             <Button
@@ -43,6 +45,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/rximageload_demo"/>
 
             <Button
@@ -53,6 +56,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/rxjavatransform_demo"/>
 
             <Button
@@ -63,6 +67,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/butter_knife"/>
 
             <Button
@@ -73,6 +78,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/svg_demo"/>
 
             <Button
@@ -83,6 +89,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/number_picker_demo"/>
 
             <Button
@@ -93,6 +100,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/binder_demo"/>
 
             <Button
@@ -103,6 +111,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/mvp_demo"/>
 
             <Button
@@ -113,6 +122,7 @@
                 android:textAllCaps="false"
                 android:textColor="@drawable/selector_button_color"
                 android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
                 android:text="@string/ndk_demo"/>
 
         </LinearLayout>
