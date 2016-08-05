@@ -7,7 +7,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,32 +19,40 @@
                 android:id="@+id/onTouchDemo"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/ontouch_demo"/>
 
             <Button
                 android:id="@+id/rxJavaDemo"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/rxjava_demo"/>
 
             <Button
                 android:id="@+id/rxImageLoadDemo"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/rximageload_demo"/>
 
             <Button
                 android:id="@+id/rxTransformDemo"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/rxjavatransform_demo"/>
 
             <Button
@@ -53,30 +61,38 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/butter_knife"/>
 
             <Button
                 android:id="@+id/btn_svg"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/svg_demo"/>
 
             <Button
                 android:id="@+id/btn_number_picker"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/number_picker_demo"/>
 
             <Button
                 android:id="@+id/btn_binder"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/binder_demo"/>
 
             <Button
@@ -85,14 +101,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/mvp_demo"/>
 
             <Button
                 android:id="@+id/btn_ndk"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
                 android:text="@string/ndk_demo"/>
 
         </LinearLayout>

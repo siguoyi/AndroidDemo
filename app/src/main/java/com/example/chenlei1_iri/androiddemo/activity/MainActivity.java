@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.onTouchDemo, R.id.rxJavaDemo, R.id.rxImageLoadDemo, R.id.rxTransformDemo, R.id.btn_butterknife, R.id.btn_svg, R.id.btn_number_picker, R.id.btn_binder, R.id.btn_mvp, R.id.btn_ndk})
+    @OnClick({R.id.onTouchDemo, R.id.rxJavaDemo, R.id.rxImageLoadDemo, R.id.rxTransformDemo, R.id.btn_butterknife,
+            R.id.btn_svg, R.id.btn_number_picker, R.id.btn_binder, R.id.btn_mvp, R.id.btn_ndk})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.onTouchDemo:
