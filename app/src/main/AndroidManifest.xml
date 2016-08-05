@@ -32,7 +32,7 @@
             android:name=".binder.RemoteService"
             android:process=":remote" />
 
-        <activity android:name=".activity.MVPActivity"></activity>
+        <activity android:name=".activity.MVPActivity" />
     </application>
 
 </manifest>

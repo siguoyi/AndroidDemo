@@ -28,4 +28,6 @@
     <string name="bind">Bind</string>
     <string name="mvp_demo">MVP Demo</string>
     <string name="mvp">MVP</string>
+    <string name="ndk_demo">NDK Demo</string>
+    <string name="ndk_demo_txt">NDK Demo</string>
 </resources>

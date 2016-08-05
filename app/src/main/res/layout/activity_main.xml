@@ -87,6 +87,14 @@
                 android:textAllCaps="false"
                 android:text="@string/mvp_demo"/>
 
+            <Button
+                android:id="@+id/btn_ndk"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAllCaps="false"
+                android:text="@string/ndk_demo"/>
+
         </LinearLayout>
 
     </ScrollView>
