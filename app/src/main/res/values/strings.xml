@@ -30,4 +30,8 @@
     <string name="mvp">MVP</string>
     <string name="ndk_demo">NDK Demo</string>
     <string name="ndk_demo_txt">NDK Demo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aidl_demo">AIDL Demo</string>
 </resources>

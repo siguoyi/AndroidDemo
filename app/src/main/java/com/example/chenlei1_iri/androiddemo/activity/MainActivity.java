@@ -1,10 +1,14 @@
 package com.example.chenlei1_iri.androiddemo.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.chenlei1_iri.androiddemo.R;
 
@@ -14,6 +18,9 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
+
+    private long firstTime = 0;
+
     @BindView(R.id.onTouchDemo)
     Button onTouchDemo;
     @BindView(R.id.rxJavaDemo)
@@ -34,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnMvp;
     @BindView(R.id.btn_ndk)
     Button btnNdk;
+    @BindView(R.id.btn_aidl)
+    Button btnAidl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.onTouchDemo, R.id.rxJavaDemo, R.id.rxImageLoadDemo, R.id.rxTransformDemo, R.id.btn_butterknife,
-            R.id.btn_svg, R.id.btn_number_picker, R.id.btn_binder, R.id.btn_mvp, R.id.btn_ndk})
+            R.id.btn_svg, R.id.btn_number_picker, R.id.btn_binder, R.id.btn_mvp, R.id.btn_ndk, R.id.btn_aidl})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.onTouchDemo:
@@ -86,6 +95,27 @@ public class MainActivity extends AppCompatActivity {
 //                Intent ndkIntent = new Intent(MainActivity.this, NDKActivity.class);
 //                startActivity(ndkIntent);
                 break;
+            case R.id.btn_aidl:
+                Intent aidlIntent = new Intent(MainActivity.this, AIDLActivity.class);
+                startActivity(aidlIntent);
+                break;
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if(keyCode != KeyEvent.KEYCODE_BACK) {
+            return false;
+        }
+        long secondTime = System.currentTimeMillis();
+        if (secondTime - firstTime > 2000) {                                         //如果两次按键时间间隔大于2秒，则不退出
+            Toast.makeText(this, "再按一次退出程序！", Toast.LENGTH_SHORT).show();
+            firstTime = secondTime;//更新firstTime
+            return true;
+        } else {                                                    //两次按键小于2秒时，退出应用
+            System.exit(0);
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

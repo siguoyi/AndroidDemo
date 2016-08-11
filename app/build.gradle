@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.chenlei1_iri.androiddemo"
-        minSdkVersion 21
+        minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -20,19 +20,27 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'io.reactivex:rxandroid:1.2.0'
     // Because RxAndroid releases are few and far between, it is recommended you also
     // explicitly depend on RxJava's latest version for bug fixes and new features.
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'io.reactivex:rxandroid:1.2.0'
     compile 'io.reactivex:rxjava:1.1.5'
     compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
     compile 'com.jakewharton:butterknife:8.1.0'
-    apt 'com.jakewharton:butterknife-compiler:8.1.0'
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
     compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.android.support:support-v4:22.2.1'
+    compile(name: 'custom-splash', ext: 'aar')
 }
