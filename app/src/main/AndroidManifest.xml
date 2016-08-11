@@ -30,7 +30,9 @@
         <activity android:name=".activity.MVPActivity" />
         <activity android:name=".activity.AIDLActivity"/>
         
-        <activity android:name="com.buptant.customsplash.pagertransformer.ViewPagerActivity">
+        <activity
+            android:name="com.buptant.customsplash.pagertransformer.ViewPagerActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
