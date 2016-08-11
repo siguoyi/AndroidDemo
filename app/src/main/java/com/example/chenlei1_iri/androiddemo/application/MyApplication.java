@@ -19,7 +19,7 @@ public class MyApplication extends Application{
 
         imgId = new int[]{R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4};
 
-        SplashConfiguration splashConfiguration = new SplashConfiguration(MainActivity.class, SplashConfiguration.ZOOM_TRANSFORM, imgId);
+        SplashConfiguration splashConfiguration = new SplashConfiguration(MainActivity.class, SplashConfiguration.ROATTE_TRANSFORM, imgId);
         splashConfiguration.init();
     }
 }
