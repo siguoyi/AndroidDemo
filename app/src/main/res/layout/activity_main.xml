@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:title="Android Demo"
+        app:subtitle="Toolbars are amazing"
+        style="@style/MyToolbar" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -135,6 +151,17 @@
                 android:background="@drawable/selector_button_bg"
                 android:textSize="@dimen/font_mormal"
                 android:text="@string/aidl_demo"/>
+
+            <Button
+                android:id="@+id/btn_date_picker"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:textColor="@drawable/selector_button_color"
+                android:background="@drawable/selector_button_bg"
+                android:textSize="@dimen/font_mormal"
+                android:text="@string/date_picker"/>
 
         </LinearLayout>
 

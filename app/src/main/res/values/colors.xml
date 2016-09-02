@@ -5,6 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="line">#03ec2a</color>
     <color name="number">#060e6c</color>
-    <color name="font_color">#ff9603</color>
+    <color name="font_color">#0199f7</color>
     <color name="white_color">#ffffff</color>
+    <color name="picker_title_bg">#c604bf</color>
+    <color name="picker_button_bg">#4206a1</color>
+    <color name="picker_bg">#c6cbcc</color>
+
 </resources>
